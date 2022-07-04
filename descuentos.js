@@ -1,12 +1,18 @@
 const precioOriginal = 100;
 const descuento = 15;
 
-const porcentajePrecioConDescuento = 100 - descuento;
-const precioConDescuento = (precioOriginal *porcentajePrecioConDescuento) / 100;
+function calcularPrecioConDescuento(precio, descuento) {
+    const porcentajePrecioConDescuento = 100 - descuento;
+    const precioConDescuento = (precio *porcentajePrecioConDescuento) / 100;
 
-console.log({
+    return precioConDescuento;
+
+}
+
+
+/* console.log({
     precioOriginal,
     descuento,
     porcentajePrecioConDescuento,
     precioConDescuento
-});
+}); */
