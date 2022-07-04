@@ -9,6 +9,8 @@ h2 {
 p {
     text-align: center;
 }
+
+
 .formulario {
     background-color: rgb(241, 241, 159);
     width: min(30rem, 100%);
@@ -24,6 +26,7 @@ p {
 
 .campo {
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .primer-campo {
@@ -35,3 +38,8 @@ p {
     color: white;
     border-radius: 20px;
     padding: 0,5rem;
+}
+
+.centrar-campos {
+    align-items: center;
+}
