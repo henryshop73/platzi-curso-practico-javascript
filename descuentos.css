@@ -1,0 +1,32 @@
+h1 {
+    text-align: center
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.formulario {
+    background-color: rgb(241, 241, 159);
+    width: min(30rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    padding: 0,5rem;
+}

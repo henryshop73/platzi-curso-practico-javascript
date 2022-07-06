@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porcentajes y descuentos | Curso Práctico de JavaScript en Platzi</title>
+    <link rel="stylesheet" href="./descuentos.css">
 </head>
 <body>
     <header>
@@ -17,16 +18,24 @@
     <section>
         <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
 
-        <form>
-            <label for="InputPrice">Escribe el precio de tu producto</label>
-            <input id="InputPrice" type="number" />
-
-            <label for="InputDiscount">Escribe el descuento de tu producto</label>
-            <input id="InputDiscount" type="number" />
-
-            <button type="button" onclick="onClickButtonPriceDiscount()">
+        <form class="formulario">
+            <div class="campo">
+                <label for="InputPrice">Escribe el precio de tu producto</label>
+            </div>
+            <div class="campo">
+                <input id="InputPrice" type="number" />
+            </div>
+            <div class="campo">
+                <label for="InputDiscount">Escribe el descuento de tu producto</label>
+            </div>
+            <div class="campo">
+                <input id="InputDiscount" type="number" />
+            </div>
+            <div class="campo">
+            <button class="button" type="button" onclick="onClickButtonPriceDiscount()">
                 Calcular el precio con descuento
             </button>
+            </div>
 
             <p id="ResultP"></p>
         </form>
