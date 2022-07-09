@@ -12,6 +12,7 @@ const lista1 = [
     1
 ]
 
+// Crear un objeto 
 const lista1Count = {}
 
 lista1.map(
@@ -23,3 +24,15 @@ lista1.map(
         }       
     }
 )
+
+// Convertir Objeto en un array 
+// Object.entries: Convierte un objeto en un array
+
+
+const lista1Array = Object.entries(lista1Count).sort(
+    function (elementoA, elementoB) {
+        return elementoA[1] - elementoB[1];
+    }
+)
+
+const moda = lista1Array[lista1Array.length - 1];
