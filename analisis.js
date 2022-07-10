@@ -1,20 +1,5 @@
-// Creando un array que solo tenga los salarios
-
-const salariosCol = colombia.map(
-    function (personita) {
-        return personita.salary;
-    }
-);
-
-// Ordenamos nuestro array de salarios con sort de menor a mayor
-
-const salariosColSorted = salariosCol.sort(
-    function (salaryA, salaryB) {
-        return salaryA - salaryB;
-    }
-);
-
 // Calculamoos si la lista es par
+// Helpers
 
 function esPar(numerito) {
     return (numerito % 2 === 0);
@@ -32,6 +17,7 @@ function calcularMediaAritmetica(lista) {
      return promedioLista;
    } 
 
+// Calculadora de Mediana
 // Calculamos la mediana de la lista de salarios
 
 function medianaSalarios(lista) {
@@ -49,9 +35,39 @@ function medianaSalarios(lista) {
         return personitaMitad;
     }
 }
-//  Llamamos a la funcion medianaSalarios y le enviamos una lista (salariosColoSorted)
 
+// Mediana General  
+// Creando un array que solo tenga los salarios
 
-console.log(
-    medianaSalarios(salariosColSorted)
+const salariosCol = colombia.map(
+    function (personita) {
+        return personita.salary;
+    }
 );
+
+// Ordenamos nuestro array de salarios con sort de menor a mayor
+
+const salariosColSorted = salariosCol.sort(
+    function (salaryA, salaryB) {
+        return salaryA - salaryB;
+    }
+);
+
+const medianaGeneralCol = medianaSalarios(salariosColSorted);
+
+// Mediana del top 10%
+
+const spliceStart = (salariosColSorted.length * 90) / 100;
+const spliceCount = salariosColSorted.length - spliceStart;
+
+const salariosColTop10 = salariosColSorted.splice(
+    spliceStart,
+    spliceCount,
+);
+
+const medianaTop10Col = medianaSalarios(salariosColTop10);
+
+console.log({
+    medianaGeneralCol,
+    medianaTop10Col,
+});
